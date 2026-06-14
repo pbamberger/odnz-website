@@ -10,8 +10,8 @@ export function ImpactStat() {
           By registering your decision and talking to your family, you can give the gift of life.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href="/become-a-donor" variant="outline">Become a Donor</Button>
-          <Button href="/about" variant="outline">Learn More</Button>
+          <Button href="/have-the-conversation-today" variant="outline">Become a Donor</Button>
+          <Button href="/about-odnz" variant="outline">Learn More</Button>
         </div>
       </div>
     </section>

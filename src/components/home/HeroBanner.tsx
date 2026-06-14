@@ -32,7 +32,7 @@ export function HeroBanner({ name, role, quote, slug, portraitUrl }: HeroBannerP
         <p className="text-gray-200 mb-6">— {name}</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Button href={`/stories/${slug}`} variant="primary">Read {name}&apos;s story</Button>
-          <Button href="/become-a-donor" variant="outline">Have the conversation today</Button>
+          <Button href="/have-the-conversation-today" variant="outline">Have the conversation today</Button>
         </div>
       </div>
     </section>
