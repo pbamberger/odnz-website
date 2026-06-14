@@ -154,6 +154,7 @@ const STANDARD_PAGES = [
   { path: '/healthcare-professionals/documents-and-forms/', slug: 'healthcare-documents-and-forms', title: 'Documents and Forms' },
   { path: '/healthcare-professionals/contact-us/', slug: 'healthcare-contact-us', title: 'Healthcare Contact Us' },
   { path: '/healthcare-professionals/how-do-i-bookmark/', slug: 'healthcare-how-do-i-bookmark', title: 'How Do I Bookmark?' },
+  { path: '/thank-you-day/stories/', slug: 'thank-you-day-stories', title: 'Thank You Day Stories' },
 ]
 
 const MEDIA_ARTICLES = [
