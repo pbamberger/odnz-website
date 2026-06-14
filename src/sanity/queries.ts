@@ -27,3 +27,22 @@ export const healthcarePageBySlugQuery = groq`
     downloadableFiles[] { label, url }
   }
 `;
+
+export const pageBySlugQuery = groq`
+  *[_type == "page" && slug.current == $slug][0] {
+    _id, title, slug, body
+  }
+`;
+
+export const healthcarePagesBySectionQuery = groq`
+  *[_type == "healthcarePage" && section == $section] | order(chapterOrder asc) {
+    _id, title, slug, section, chapterOrder
+  }
+`;
+
+export const healthcareChapterQuery = groq`
+  *[_type == "healthcarePage" && section == $section && chapterOrder == $order][0] {
+    _id, title, slug, section, chapterOrder, body,
+    downloadableFiles[] { label, url }
+  }
+`;

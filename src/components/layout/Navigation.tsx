@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 const publicLinks = [
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-odnz" },
   { label: "Donation Stories", href: "/stories" },
-  { label: "Become a Donor", href: "/become-a-donor" },
-  { label: "For Families", href: "/for-families" },
+  { label: "Become a Donor", href: "/have-the-conversation-today" },
+  { label: "For Families", href: "/knowledge-centre" },
 ];
 
 const healthcareLinks = [

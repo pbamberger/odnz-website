@@ -6,10 +6,10 @@ const columns = [
   {
     heading: "Donation",
     links: [
-      { label: "Become a Donor", href: "/become-a-donor" },
+      { label: "Become a Donor", href: "/have-the-conversation-today" },
       { label: "Donation Stories", href: "/stories" },
-      { label: "For Families", href: "/for-families" },
-      { label: "FAQs", href: "/about/faqs" },
+      { label: "For Families", href: "/knowledge-centre" },
+      { label: "FAQs", href: "/facts-and-myths-faqs" },
     ],
   },
   {
@@ -23,9 +23,9 @@ const columns = [
   {
     heading: "Organisation",
     links: [
-      { label: "About ODNZ", href: "/about" },
-      { label: "Thank You Day", href: "/about/thank-you-day" },
-      { label: "Contact", href: "/contact" },
+      { label: "About ODNZ", href: "/about-odnz" },
+      { label: "Thank You Day", href: "/thank-you-day" },
+      { label: "Contact", href: "/contact-us" },
     ],
   },
 ];
@@ -59,9 +59,7 @@ export function Footer() {
         <div className="border-t border-gray-800 mt-10 pt-6 text-xs text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
           <p>© <Suspense fallback="2026"><CopyrightYear /></Suspense> Organ Donation New Zealand</p>
           <p>
-            <Link href="/privacy" className="hover:text-gray-300">Privacy Policy</Link>
-            {" · "}
-            <Link href="/terms" className="hover:text-gray-300">Terms</Link>
+            <Link href="/privacy-policy" className="hover:text-gray-300">Privacy Policy</Link>
           </p>
         </div>
       </div>

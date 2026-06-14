@@ -6,6 +6,8 @@ export const metadata: Metadata = { title: { absolute: "Healthcare Professionals
 const sidebarLinks = [
   { label: "Overview", href: "/healthcare" },
   { label: "ICU Guidelines", href: "/healthcare/icu-guidelines" },
+  { label: "Emergency Department", href: "/healthcare/emergency-department" },
+  { label: "Operating Theatre", href: "/healthcare/operating-theatre" },
   { label: "Link Team Clinicians", href: "/healthcare/link-team" },
   { label: "Resources & Downloads", href: "/healthcare/resources" },
 ];

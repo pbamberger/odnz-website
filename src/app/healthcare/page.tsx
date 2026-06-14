@@ -6,6 +6,8 @@ export const metadata: Metadata = { title: "Healthcare Professionals" };
 
 const sections = [
   { key: "icu-guidelines", label: "ICU Guidelines", href: "/healthcare/icu-guidelines", description: "Clinical protocols for intensive care unit staff managing potential organ donors." },
+  { key: "emergency-department", label: "Emergency Department", href: "/healthcare/emergency-department", description: "Guidance for ED clinicians on identifying and supporting potential donors." },
+  { key: "operating-theatre", label: "Operating Theatre", href: "/healthcare/operating-theatre", description: "Protocols for operating theatre staff involved in organ donation procedures." },
   { key: "link-team", label: "Link Team Clinicians", href: "/healthcare/link-team", description: "Resources and guidance for Link Team members coordinating donation." },
   { key: "resources", label: "Resources & Downloads", href: "/healthcare/resources", description: "Forms, reference materials, and downloadable clinical resources." },
 ];
