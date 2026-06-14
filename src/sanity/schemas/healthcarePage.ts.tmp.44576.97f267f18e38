@@ -10,7 +10,7 @@ export const healthcarePage = defineType({
     defineField({
       name: "section",
       type: "string",
-      options: { list: ["icu-guidelines", "emergency-department", "operating-theatre", "link-team", "resources"] },
+      options: { list: ["icu-guidelines", "link-team", "resources"] },
     }),
     defineField({ name: "chapterOrder", type: "number" }),
     defineField({ name: "body", type: "array", of: [{ type: "block" }] }),

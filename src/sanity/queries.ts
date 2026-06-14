@@ -24,6 +24,6 @@ export const healthcarePagesQuery = groq`
 export const healthcarePageBySlugQuery = groq`
   *[_type == "healthcarePage" && slug.current == $slug][0] {
     _id, title, slug, section, chapterOrder, body,
-    downloadableFiles[] { label, "url": file.asset->url }
+    downloadableFiles[] { label, url }
   }
 `;
