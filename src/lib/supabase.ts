@@ -3,7 +3,7 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 let _client: SupabaseClient | null = null;
 
 function clean(v: string | undefined): string | undefined {
-  return v?.replace(/[\r\n]/g, "").trim();
+  return v?.replace(/[\r\n]/g, "").trim() || undefined;
 }
 
 export function getSupabaseClient(): SupabaseClient {
@@ -11,7 +11,6 @@ export function getSupabaseClient(): SupabaseClient {
     const url = clean(process.env.SUPABASE_URL);
     const key = clean(process.env.SUPABASE_SERVICE_ROLE_KEY);
     if (!url || !key) throw new Error("Supabase credentials not configured");
-    console.log("[supabase] init url_len:", url.length, "key_len:", key.length);
     _client = createClient(url, key);
   }
   return _client;
@@ -29,10 +28,4 @@ export function getSupabaseClient(): SupabaseClient {
     subject     text        NOT NULL,
     message     text        NOT NULL
   );
-
-  Required .env.local additions:
-    SUPABASE_URL=https://<project>.supabase.co
-    SUPABASE_SERVICE_ROLE_KEY=eyJ...
-    RESEND_FROM=ODNZ Contact <noreply@donor.co.nz>
-    CONTACT_EMAIL_TO=info@donor.co.nz
 */

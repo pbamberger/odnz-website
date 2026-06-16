@@ -18,7 +18,6 @@ function clean(v: string | undefined): string | undefined {
 export async function POST(req: Request) {
   try {
     const apiKey = clean(process.env.RESEND_API_KEY);
-    console.log("[contact] start apiKey.len:", apiKey?.length ?? "MISSING");
 
     let body: unknown;
     try {
@@ -37,8 +36,7 @@ export async function POST(req: Request) {
 
     const { name, email, phone, subject, message } = result.data;
 
-    // --- Supabase (non-fatal) ---
-    console.log("[contact] attempting db insert");
+    // DB insert is non-fatal — email notification is the primary delivery mechanism
     try {
       const db = getSupabaseClient();
       const { error: dbError } = await db
@@ -46,15 +44,11 @@ export async function POST(req: Request) {
         .insert({ name, email, phone: phone || null, subject, message });
       if (dbError) {
         console.error("[contact] db error:", dbError.message, dbError.code);
-      } else {
-        console.log("[contact] db insert ok");
       }
     } catch (err) {
       console.error("[contact] db threw:", err instanceof Error ? err.message : String(err));
     }
 
-    // --- Resend ---
-    console.log("[contact] attempting email send");
     try {
       const resend = new Resend(apiKey);
       const from = clean(process.env.RESEND_FROM) ?? "ODNZ Contact <noreply@donor.co.nz>";
@@ -78,12 +72,9 @@ export async function POST(req: Request) {
       });
       if (emailError) {
         console.error("[contact] email error:", emailError.message);
-      } else {
-        console.log("[contact] email sent ok");
       }
     } catch (err) {
       console.error("[contact] email threw:", err instanceof Error ? err.message : String(err));
-      // non-fatal — submission already saved
     }
 
     return NextResponse.json({ success: true });
