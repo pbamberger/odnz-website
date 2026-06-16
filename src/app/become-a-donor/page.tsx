@@ -116,10 +116,9 @@ export default function BecomeADonorPage() {
             How to become a donor in New Zealand
           </h2>
           <p className="text-gray-500 text-center mb-12 max-w-xl mx-auto">
-            New Zealand doesn&apos;t have a standalone online register yet. There are two things you can
-            do — and the first one matters most.
+            There are three things you can do — and the first one matters most.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Step 1 */}
             <div className="relative rounded-2xl bg-amber-50 border-2 border-amber-200 p-8">
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-600 text-white font-bold text-lg mb-4">
@@ -140,23 +139,46 @@ export default function BecomeADonorPage() {
               </p>
             </div>
             {/* Step 2 */}
+            <div className="rounded-2xl bg-green-50 border-2 border-green-200 p-8">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-600 text-white font-bold text-lg mb-4">
+                2
+              </span>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Register with ODNZ</h3>
+              <p className="text-green-700 text-sm font-semibold uppercase tracking-wide mb-3">
+                Record your specific wishes
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Register online with ODNZ to record exactly which organs and tissues you&apos;re willing
+                to donate. Takes about 2 minutes. You can update your preferences at any time.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Sign in with Google to create your registration — your name and email are pre-filled
+                automatically.
+              </p>
+              <Link
+                href="/register-as-donor"
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition-colors"
+              >
+                Register now →
+              </Link>
+            </div>
+            {/* Step 3 */}
             <div className="rounded-2xl bg-gray-50 border border-gray-200 p-8">
               <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-700 text-white font-bold text-lg mb-4">
-                2
+                3
               </span>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Tick DONOR on your licence</h3>
               <p className="text-gray-500 text-sm font-semibold uppercase tracking-wide mb-3">
-                Records your intent
+                Also records your intent
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 On question 4C of your NZTA driver&apos;s licence application or renewal, tick DONOR. The
                 word will be printed on your licence and recorded in the NZTA database.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6">
-                This is an expression of your wishes — not a binding register. It works best when your
-                family already knows your decision.
+                An expression of your wishes — not a binding register. Works best combined with steps 1 and 2.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col gap-3">
                 <a
                   href="https://www.nzta.govt.nz/driver-licences/getting-a-licence/organ-and-tissue-donation"
                   target="_blank"
@@ -164,12 +186,6 @@ export default function BecomeADonorPage() {
                   className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-gray-800 text-white text-sm font-semibold hover:bg-gray-900 transition-colors"
                 >
                   Update via NZTA
-                </a>
-                <a
-                  href="tel:08008224222"
-                  className="inline-flex items-center justify-center px-5 py-2.5 rounded-md border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition-colors"
-                >
-                  Call 0800 822 422
                 </a>
               </div>
             </div>
@@ -365,8 +381,8 @@ export default function BecomeADonorPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/stories">Read donation stories</Button>
-            <Button href="/have-the-conversation-today" variant="secondary">
-              Have the conversation
+            <Button href="/register-as-donor" variant="secondary">
+              Register as a donor
             </Button>
           </div>
         </div>
