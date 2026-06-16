@@ -37,7 +37,7 @@ export async function POST(req: Request) {
 
     const { name, email, phone, subject, message } = result.data;
 
-    // --- Supabase ---
+    // --- Supabase (non-fatal) ---
     console.log("[contact] attempting db insert");
     try {
       const db = getSupabaseClient();
@@ -46,12 +46,11 @@ export async function POST(req: Request) {
         .insert({ name, email, phone: phone || null, subject, message });
       if (dbError) {
         console.error("[contact] db error:", dbError.message, dbError.code);
-        return NextResponse.json({ error: "Failed to save submission" }, { status: 500 });
+      } else {
+        console.log("[contact] db insert ok");
       }
-      console.log("[contact] db insert ok");
     } catch (err) {
       console.error("[contact] db threw:", err instanceof Error ? err.message : String(err));
-      return NextResponse.json({ error: "Failed to save submission" }, { status: 500 });
     }
 
     // --- Resend ---
