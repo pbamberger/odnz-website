@@ -2,11 +2,16 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 let _client: SupabaseClient | null = null;
 
+function clean(v: string | undefined): string | undefined {
+  return v?.replace(/[\r\n]/g, "").trim();
+}
+
 export function getSupabaseClient(): SupabaseClient {
   if (!_client) {
-    const url = process.env.SUPABASE_URL?.trim();
-    const key = process.env.SUPABASE_SERVICE_ROLE_KEY?.trim();
+    const url = clean(process.env.SUPABASE_URL);
+    const key = clean(process.env.SUPABASE_SERVICE_ROLE_KEY);
     if (!url || !key) throw new Error("Supabase credentials not configured");
+    console.log("[supabase] init url_len:", url.length, "key_len:", key.length);
     _client = createClient(url, key);
   }
   return _client;

@@ -11,8 +11,15 @@ const schema = z.object({
   message: z.string().min(10).max(2000),
 });
 
+function clean(v: string | undefined): string | undefined {
+  return v?.replace(/[\r\n]/g, "").trim();
+}
+
 export async function POST(req: Request) {
-  const resend = new Resend(process.env.RESEND_API_KEY?.trim());
+  const apiKey = clean(process.env.RESEND_API_KEY);
+  console.log("[contact] resend_key_len:", apiKey?.length ?? 0);
+  const resend = new Resend(apiKey);
+
   let body: unknown;
   try {
     body = await req.json();
@@ -47,9 +54,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Failed to save submission" }, { status: 500 });
   }
 
+  const from = clean(process.env.RESEND_FROM) ?? "ODNZ Contact <noreply@donor.co.nz>";
+  const to = [clean(process.env.CONTACT_EMAIL_TO) ?? "info@donor.co.nz"];
+
   const { error: emailError } = await resend.emails.send({
-    from: (process.env.RESEND_FROM ?? "ODNZ Contact <noreply@donor.co.nz>").trim(),
-    to: [(process.env.CONTACT_EMAIL_TO ?? "info@donor.co.nz").trim()],
+    from,
+    to,
     replyTo: email,
     subject: `Contact form: ${subject}`,
     text: [
