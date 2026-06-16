@@ -12,7 +12,7 @@ const schema = z.object({
 });
 
 export async function POST(req: Request) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const resend = new Resend(process.env.RESEND_API_KEY?.trim());
   let body: unknown;
   try {
     body = await req.json();
@@ -30,7 +30,15 @@ export async function POST(req: Request) {
 
   const { name, email, phone, subject, message } = result.data;
 
-  const { error: dbError } = await getSupabaseClient()
+  let dbClient;
+  try {
+    dbClient = getSupabaseClient();
+  } catch (err) {
+    console.error("[contact] Supabase client init failed:", err);
+    return NextResponse.json({ error: "Failed to save submission" }, { status: 500 });
+  }
+
+  const { error: dbError } = await dbClient
     .from("contact_submissions")
     .insert({ name, email, phone: phone || null, subject, message });
 
@@ -40,8 +48,8 @@ export async function POST(req: Request) {
   }
 
   const { error: emailError } = await resend.emails.send({
-    from: process.env.RESEND_FROM ?? "ODNZ Contact <noreply@donor.co.nz>",
-    to: [process.env.CONTACT_EMAIL_TO ?? "info@donor.co.nz"],
+    from: (process.env.RESEND_FROM ?? "ODNZ Contact <noreply@donor.co.nz>").trim(),
+    to: [(process.env.CONTACT_EMAIL_TO ?? "info@donor.co.nz").trim()],
     replyTo: email,
     subject: `Contact form: ${subject}`,
     text: [
