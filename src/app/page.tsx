@@ -22,7 +22,7 @@ export default async function HomePage() {
       <ImpactStat />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl font-bold text-gray-900">Donation Stories</h2>
+          <h2 className="text-2xl font-bold text-charcoal">Donation Stories</h2>
           <Button href="/stories" variant="secondary">See all stories</Button>
         </div>
         {rest.length > 0 ? (
@@ -39,13 +39,13 @@ export default async function HomePage() {
             ))}
           </div>
         ) : (
-          <p className="text-gray-500 text-center py-12">Stories coming soon.</p>
+          <p className="text-charcoal/50 text-center py-12">Stories coming soon.</p>
         )}
       </section>
-      <section className="bg-gray-50 py-16 px-4">
+      <section className="bg-accent py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Have the conversation today</h2>
-          <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+          <h2 className="text-2xl font-bold text-charcoal mb-4">Have the conversation today</h2>
+          <p className="text-charcoal/70 mb-8 text-lg leading-relaxed font-sans">
             The most important thing you can do is talk to your family about your wishes.
             Registration is important, but your family&apos;s support makes donation possible.
           </p>

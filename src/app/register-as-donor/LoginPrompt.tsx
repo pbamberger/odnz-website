@@ -15,8 +15,8 @@ export function LoginPrompt({ error }: { error?: string }) {
 
   return (
     <div className="max-w-lg mx-auto px-4 py-20 text-center">
-      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-100 mb-6">
-        <svg className="w-8 h-8 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent mb-6">
+        <svg className="w-8 h-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
         </svg>
       </div>

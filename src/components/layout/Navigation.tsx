@@ -51,8 +51,8 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-amber-600 font-bold text-lg">ODNZ</span>
-            <span className="text-gray-700 text-sm hidden sm:block">Organ Donation NZ</span>
+            <span className="text-primary font-bold text-lg tracking-tight">ODNZ</span>
+            <span className="text-charcoal/50 text-sm hidden sm:block">Organ Donation NZ</span>
           </Link>
 
           {/* Desktop nav */}
@@ -64,7 +64,7 @@ export function Navigation() {
                   key={l.href}
                   href={l.href}
                   aria-current={active ? "page" : undefined}
-                  className={`text-sm transition-colors ${active ? "text-amber-600 font-semibold" : "text-gray-600 hover:text-amber-600"}`}
+                  className={`text-sm transition-colors ${active ? "text-secondary font-semibold" : "text-charcoal/70 hover:text-primary"}`}
                 >
                   {l.label}
                 </Link>
@@ -75,7 +75,7 @@ export function Navigation() {
                 onClick={() => setHealthcareOpen(!healthcareOpen)}
                 aria-expanded={healthcareOpen}
                 aria-haspopup="menu"
-                className={`text-sm transition-colors flex items-center gap-1 ${healthcareActive ? "text-amber-600 font-semibold" : "text-gray-600 hover:text-amber-600"}`}
+                className={`text-sm transition-colors flex items-center gap-1 ${healthcareActive ? "text-secondary font-semibold" : "text-charcoal/70 hover:text-primary"}`}
               >
                 Healthcare Professionals
                 <svg
@@ -93,7 +93,7 @@ export function Navigation() {
                       href={l.href}
                       role="menuitem"
                       onClick={() => setHealthcareOpen(false)}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700"
+                      className="block px-4 py-2 text-sm text-charcoal hover:bg-accent hover:text-primary"
                     >
                       {l.label}
                     </Link>
@@ -105,7 +105,7 @@ export function Navigation() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden p-2 text-gray-600"
+            className="md:hidden p-2 text-charcoal/70"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle navigation menu"
             aria-expanded={menuOpen}
@@ -130,19 +130,19 @@ export function Navigation() {
                 href={l.href}
                 onClick={() => setMenuOpen(false)}
                 aria-current={active ? "page" : undefined}
-                className={`block py-2 text-sm ${active ? "text-amber-600 font-semibold" : "text-gray-700 hover:text-amber-600"}`}
+                className={`block py-2 text-sm ${active ? "text-secondary font-semibold" : "text-charcoal/70 hover:text-primary"}`}
               >
                 {l.label}
               </Link>
             );
           })}
-          <p className="pt-2 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wide">Healthcare</p>
+          <p className="pt-2 pb-1 text-xs font-semibold text-charcoal/40 uppercase tracking-wide">Healthcare</p>
           {healthcareLinks.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-2 text-sm text-gray-700 hover:text-amber-600 pl-2"
+              className="block py-2 text-sm text-charcoal/70 hover:text-primary pl-2"
             >
               {l.label}
             </Link>

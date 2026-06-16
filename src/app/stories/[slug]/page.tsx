@@ -22,8 +22,8 @@ export default async function StoryPage({ params }: Props) {
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <Button href="/stories" variant="secondary" className="mb-8">← Back to stories</Button>
-      <span className="text-xs font-semibold text-amber-600 uppercase tracking-wide capitalize">{story.role}</span>
-      <h1 className="text-4xl font-bold text-gray-900 mt-2 mb-6">{story.title}</h1>
+      <span className="text-xs font-semibold text-secondary uppercase tracking-wide capitalize font-sans">{story.role}</span>
+      <h1 className="text-4xl font-bold text-charcoal mt-2 mb-6">{story.title}</h1>
       {story.portrait?.asset?.url && (
         <div className="relative h-80 rounded-xl overflow-hidden mb-8">
           <Image
@@ -37,7 +37,7 @@ export default async function StoryPage({ params }: Props) {
         </div>
       )}
       {story.quote && (
-        <blockquote className="border-l-4 border-amber-500 pl-5 text-xl italic text-gray-700 mb-8">
+        <blockquote className="border-l-4 border-secondary pl-5 text-xl italic text-charcoal/70 mb-8">
           &ldquo;{story.quote}&rdquo;
         </blockquote>
       )}

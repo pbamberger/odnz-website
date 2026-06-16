@@ -28,11 +28,11 @@ export default async function HealthcareLandingPage() {
             <Link
               key={s.key}
               href={s.href}
-              className="block p-5 border border-gray-200 rounded-lg hover:border-amber-400 hover:shadow-sm transition-all"
+              className="block p-5 border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm transition-all"
             >
               <h2 className="font-semibold text-gray-900 mb-1">{s.label}</h2>
               <p className="text-sm text-gray-500 mb-3">{s.description}</p>
-              {count > 0 && <span className="text-xs text-amber-600">{count} page{count !== 1 ? "s" : ""}</span>}
+              {count > 0 && <span className="text-xs text-secondary">{count} page{count !== 1 ? "s" : ""}</span>}
             </Link>
           );
         })}

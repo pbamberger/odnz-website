@@ -78,21 +78,21 @@ export default function BecomeADonorPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-amber-600 text-white py-20 px-4">
+      <section className="bg-primary text-white py-20 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-amber-200 text-sm font-semibold uppercase tracking-widest mb-4">
+          <p className="text-white/60 text-sm font-semibold uppercase tracking-widest mb-4">
             Organ &amp; Tissue Donation
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
             One donor.<br />Up to 10 lives changed.
           </h1>
-          <p className="text-amber-100 text-xl mb-3 leading-relaxed">
+          <p className="text-white/70 text-xl mb-3 leading-relaxed">
             In 2024, 70 New Zealanders became donors and 213 people received a second chance at life.
           </p>
-          <p className="text-amber-100 text-lg mb-10">
+          <p className="text-white/70 text-lg mb-10">
             Over 400 people are still waiting. Your decision matters.
           </p>
-          <p className="text-amber-200 text-sm">
+          <p className="text-white/60 text-sm">
             Questions? Call <strong>0800 4 DONOR</strong> (0800 436 667)
           </p>
         </div>
@@ -109,12 +109,12 @@ export default function BecomeADonorPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Step 1 */}
-            <div className="relative rounded-2xl bg-amber-50 border-2 border-amber-200 p-8">
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-amber-600 text-white font-bold text-lg mb-4">
+            <div className="relative rounded-2xl bg-accent border-2 border-accent-dark p-8">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-lg mb-4">
                 1
               </span>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Tell your family</h3>
-              <p className="text-amber-700 text-sm font-semibold uppercase tracking-wide mb-3">
+              <h3 className="text-xl font-bold text-charcoal mb-2">Tell your family</h3>
+              <p className="text-secondary text-sm font-semibold uppercase tracking-wide mb-3 font-sans">
                 The most important step
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -128,12 +128,12 @@ export default function BecomeADonorPage() {
               </p>
             </div>
             {/* Step 2 */}
-            <div className="rounded-2xl bg-green-50 border-2 border-green-200 p-8">
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-600 text-white font-bold text-lg mb-4">
+            <div className="rounded-2xl bg-primary/5 border-2 border-primary/20 p-8">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white font-bold text-lg mb-4">
                 2
               </span>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Register with ODNZ</h3>
-              <p className="text-green-700 text-sm font-semibold uppercase tracking-wide mb-3">
+              <h3 className="text-xl font-bold text-charcoal mb-2">Register with ODNZ</h3>
+              <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-3 font-sans">
                 Record your specific wishes
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -146,18 +146,18 @@ export default function BecomeADonorPage() {
               </p>
               <Link
                 href="/register-as-donor"
-                className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition-colors"
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-secondary text-white text-sm font-semibold hover:bg-secondary-dark transition-colors"
               >
                 Register now →
               </Link>
             </div>
             {/* Step 3 */}
             <div className="rounded-2xl bg-gray-50 border border-gray-200 p-8">
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-700 text-white font-bold text-lg mb-4">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-charcoal text-white font-bold text-lg mb-4">
                 3
               </span>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Tick DONOR on your licence</h3>
-              <p className="text-gray-500 text-sm font-semibold uppercase tracking-wide mb-3">
+              <h3 className="text-xl font-bold text-charcoal mb-2">Tick DONOR on your licence</h3>
+              <p className="text-charcoal/50 text-sm font-semibold uppercase tracking-wide mb-3 font-sans">
                 Also records your intent
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -198,7 +198,7 @@ export default function BecomeADonorPage() {
               <ul className="space-y-3">
                 {ORGANS.map((o) => (
                   <li key={o.name} className="flex gap-3">
-                    <span className="mt-1 w-2 h-2 rounded-full bg-amber-500 shrink-0" />
+                    <span className="mt-1 w-2 h-2 rounded-full bg-secondary shrink-0" />
                     <div>
                       <span className="font-semibold text-gray-900">{o.name}</span>
                       <span className="text-gray-500 text-sm"> — {o.note}</span>
@@ -214,7 +214,7 @@ export default function BecomeADonorPage() {
               <ul className="space-y-3">
                 {TISSUES.map((t) => (
                   <li key={t.name} className="flex gap-3">
-                    <span className="mt-1 w-2 h-2 rounded-full bg-amber-300 shrink-0" />
+                    <span className="mt-1 w-2 h-2 rounded-full bg-secondary/50 shrink-0" />
                     <div>
                       <span className="font-semibold text-gray-900">{t.name}</span>
                       <span className="text-gray-500 text-sm"> — {t.note}</span>
@@ -227,7 +227,7 @@ export default function BecomeADonorPage() {
                 <p className="text-sm text-gray-600">
                   You can donate a kidney or part of your liver while alive. In 2024, around 85 New
                   Zealanders donated a kidney to someone they loved.{" "}
-                  <Link href="/contact-us" className="text-amber-700 hover:underline">
+                  <Link href="/contact-us" className="text-secondary hover:underline">
                     Contact us
                   </Link>{" "}
                   to learn more.
@@ -257,9 +257,9 @@ export default function BecomeADonorPage() {
                 had told them
               </p>
             </div>
-            <div className="rounded-xl bg-amber-50 border border-amber-200 p-6 text-center">
-              <p className="text-4xl font-bold text-amber-700 mb-2">63%</p>
-              <p className="text-sm text-amber-800 leading-snug">
+            <div className="rounded-xl bg-accent border border-accent-dark p-6 text-center">
+              <p className="text-4xl font-bold text-secondary mb-2">63%</p>
+              <p className="text-sm text-primary leading-snug">
                 of families say <strong>yes</strong> when they <em>knew</em> their loved one wanted to
                 donate — even without registration
               </p>
@@ -276,12 +276,12 @@ export default function BecomeADonorPage() {
             Source: DonateLife Australia family consent data, verified across multiple years
           </p>
 
-          <div className="rounded-2xl bg-amber-50 border border-amber-200 p-8 mb-8">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">How to start the conversation</h3>
+          <div className="rounded-2xl bg-accent border border-accent-dark p-8 mb-8">
+            <h3 className="text-lg font-bold text-charcoal mb-4">How to start the conversation</h3>
             <ul className="space-y-4">
               {CONVERSATION_STARTERS.map((s, i) => (
-                <li key={i} className="flex gap-3 text-gray-700">
-                  <span className="text-amber-500 font-bold shrink-0">→</span>
+                <li key={i} className="flex gap-3 text-charcoal/70 font-sans">
+                  <span className="text-secondary font-bold shrink-0">→</span>
                   <span>{s}</span>
                 </li>
               ))}
@@ -297,18 +297,18 @@ export default function BecomeADonorPage() {
       </section>
 
       {/* Stats */}
-      <section className="bg-amber-600 text-white py-16 px-4">
+      <section className="bg-primary text-white py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-10">New Zealand donation in 2024</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
             {STATS.map((s) => (
               <div key={s.label} className="text-center">
                 <p className="text-4xl sm:text-5xl font-bold mb-2">{s.number}</p>
-                <p className="text-amber-100 text-sm leading-snug">{s.label}</p>
+                <p className="text-white/70 text-sm leading-snug">{s.label}</p>
               </div>
             ))}
           </div>
-          <p className="text-center text-amber-200 text-sm mt-8">
+          <p className="text-center text-white/60 text-sm mt-8">
             New Zealand had 36 deceased donors in 2013. By 2024 that number was 70 — and climbing.
             Every registered decision, every family conversation, moves these numbers.
           </p>
@@ -348,11 +348,11 @@ export default function BecomeADonorPage() {
           </div>
           <p className="mt-8 text-center text-gray-500 text-sm">
             More detailed answers are in our{" "}
-            <Link href="/facts-and-myths/faqs" className="text-amber-700 hover:underline font-medium">
+            <Link href="/facts-and-myths/faqs" className="text-secondary hover:underline font-medium">
               full FAQ
             </Link>{" "}
             and{" "}
-            <Link href="/facts-and-myths/myths" className="text-amber-700 hover:underline font-medium">
+            <Link href="/facts-and-myths/myths" className="text-secondary hover:underline font-medium">
               myths section
             </Link>
             .
@@ -361,10 +361,10 @@ export default function BecomeADonorPage() {
       </section>
 
       {/* Stories CTA */}
-      <section className="bg-gray-50 py-16 px-4">
+      <section className="bg-accent py-16 px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Hear from those it has touched</h2>
-          <p className="text-gray-600 mb-8 leading-relaxed">
+          <h2 className="text-2xl font-bold text-charcoal mb-4">Hear from those it has touched</h2>
+          <p className="text-charcoal/60 mb-8 leading-relaxed font-sans">
             Behind every statistic is a family who made the call — and a recipient who got to live.
             Read their stories.
           </p>

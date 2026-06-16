@@ -60,7 +60,7 @@ export default async function HealthcareSectionPage({ params }: Props) {
       <div>
         <h1 className="text-2xl font-bold text-gray-900 mb-3">{meta.label}</h1>
         <p className="text-gray-600 mb-6">{meta.description}</p>
-        <div className="bg-amber-50 border border-amber-200 rounded-lg p-5 text-sm text-amber-800">
+        <div className="bg-accent border border-accent-dark rounded-lg p-5 text-sm text-primary">
           The ODNZ Link portal is a secure area for Link Team clinicians. Please contact ODNZ directly to request access.
         </div>
       </div>
@@ -79,9 +79,9 @@ export default async function HealthcareSectionPage({ params }: Props) {
             <li key={ch._id}>
               <Link
                 href={`/healthcare/${section}/${ch.chapterOrder}`}
-                className="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:border-amber-400 hover:shadow-sm transition-all group"
+                className="flex items-center gap-4 p-4 border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm transition-all group"
               >
-                <span className="text-2xl font-bold text-gray-200 group-hover:text-amber-300 transition-colors w-8 shrink-0 text-right">
+                <span className="text-2xl font-bold text-gray-200 group-hover:text-secondary transition-colors w-8 shrink-0 text-right">
                   {ch.chapterOrder}
                 </span>
                 <span className="text-gray-800 group-hover:text-gray-900 font-medium">{ch.title}</span>

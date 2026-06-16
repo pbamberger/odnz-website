@@ -71,31 +71,31 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
         </p>
 
         {/* Tell your family — the most important next step */}
-        <div className="rounded-2xl bg-amber-50 border-2 border-amber-200 p-8 text-left mb-8">
+        <div className="rounded-2xl bg-accent border-2 border-accent-dark p-8 text-left mb-8">
           <h3 className="text-lg font-bold text-gray-900 mb-2">
             Now do the most important thing
           </h3>
-          <p className="text-amber-800 font-semibold mb-4">Tell your family.</p>
+          <p className="text-primary font-semibold mb-4">Tell your family.</p>
           <p className="text-gray-700 leading-relaxed mb-4">
             Families who know their loved one wanted to donate say yes 82% of the time.
             Families who don&apos;t know say yes only 38% of the time. Your registration matters
             — but this conversation matters more.
           </p>
           <p className="text-gray-600 text-sm mb-5">Here&apos;s a message you can send right now:</p>
-          <div className="rounded-lg bg-white border border-amber-200 p-4 text-sm text-gray-700 italic leading-relaxed mb-5">
+          <div className="rounded-lg bg-white border border-accent-dark p-4 text-sm text-gray-700 italic leading-relaxed mb-5">
             &ldquo;I just registered as an organ and tissue donor. If anything ever happens to me,
             I want you to know — please support that decision. It could help up to 10 people.&rdquo;
           </div>
           <div className="flex flex-wrap gap-3">
             <a
               href={`sms:?body=${encodeURIComponent("I just registered as an organ and tissue donor. If anything ever happens to me, I want you to know — please support that decision. It could help up to 10 people.")}`}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded-md text-sm font-semibold hover:bg-amber-700 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-md text-sm font-semibold hover:bg-secondary-dark transition-colors"
             >
               Send via text
             </a>
             <a
               href={`mailto:?subject=My organ donor decision&body=${encodeURIComponent("I just registered as an organ and tissue donor. If anything ever happens to me, I want you to know — please support that decision. It could help up to 10 people.")}`}
-              className="inline-flex items-center gap-2 px-4 py-2 border border-amber-600 text-amber-700 rounded-md text-sm font-semibold hover:bg-amber-50 transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 border border-amber-600 text-secondary rounded-md text-sm font-semibold hover:bg-accent transition-colors"
             >
               Send via email
             </a>
@@ -109,7 +109,7 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
           href="https://www.nzta.govt.nz/driver-licences/getting-a-licence/organ-and-tissue-donation"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-amber-700 hover:underline"
+          className="text-sm text-secondary hover:underline"
         >
           Update via NZTA →
         </a>
@@ -117,14 +117,14 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
     );
   }
 
-  const field = "w-full rounded-md border border-gray-300 px-3 py-2.5 text-sm text-gray-900 focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500";
+  const field = "w-full rounded-md border border-gray-300 px-3 py-2.5 text-sm text-gray-900 focus:border-secondary focus:outline-none focus:ring-1 focus:ring-primary";
   const labelCls = "block text-sm font-medium text-gray-700 mb-1";
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       {/* Reciprocity message — highest-ROI UX intervention per Sallis et al. 2018 */}
-      <div className="rounded-xl bg-amber-50 border border-amber-200 px-6 py-5 mb-10">
-        <p className="text-amber-900 font-semibold leading-relaxed">
+      <div className="rounded-xl bg-accent border border-accent-dark px-6 py-5 mb-10">
+        <p className="text-primary font-semibold leading-relaxed">
           If you needed an organ transplant, would you have one?
           If so — please help others by registering your decision today.
         </p>
@@ -164,28 +164,28 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
             tissues, or select specific ones.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-            <label className={`flex items-start gap-3 rounded-xl border-2 p-4 cursor-pointer transition-colors ${donateAll ? "border-amber-500 bg-amber-50" : "border-gray-200 hover:border-gray-300"}`}>
+            <label className={`flex items-start gap-3 rounded-xl border-2 p-4 cursor-pointer transition-colors ${donateAll ? "border-secondary bg-accent" : "border-gray-200 hover:border-gray-300"}`}>
               <input
                 type="radio"
                 name="donate_all"
                 value="all"
                 checked={donateAll}
                 onChange={() => setDonateAll(true)}
-                className="mt-0.5 accent-amber-600"
+                className="mt-0.5 accent-secondary"
               />
               <div>
                 <p className="font-semibold text-sm text-gray-900">All organs and tissues</p>
                 <p className="text-xs text-gray-500 mt-0.5">Recommended — maximises lives helped</p>
               </div>
             </label>
-            <label className={`flex items-start gap-3 rounded-xl border-2 p-4 cursor-pointer transition-colors ${!donateAll ? "border-amber-500 bg-amber-50" : "border-gray-200 hover:border-gray-300"}`}>
+            <label className={`flex items-start gap-3 rounded-xl border-2 p-4 cursor-pointer transition-colors ${!donateAll ? "border-secondary bg-accent" : "border-gray-200 hover:border-gray-300"}`}>
               <input
                 type="radio"
                 name="donate_all"
                 value="specific"
                 checked={!donateAll}
                 onChange={() => setDonateAll(false)}
-                className="mt-0.5 accent-amber-600"
+                className="mt-0.5 accent-secondary"
               />
               <div>
                 <p className="font-semibold text-sm text-gray-900">Specific organs / tissues</p>
@@ -206,7 +206,7 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
                         name="organs"
                         value={o.id}
                         defaultChecked={Array.isArray(existing?.specific_organs) && (existing.specific_organs as string[]).includes(o.id)}
-                        className="accent-amber-600 w-4 h-4"
+                        className="accent-secondary w-4 h-4"
                       />
                       {o.label}
                     </label>
@@ -223,7 +223,7 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
                         name="tissues"
                         value={t.id}
                         defaultChecked={Array.isArray(existing?.specific_tissues) && (existing.specific_tissues as string[]).includes(t.id)}
-                        className="accent-amber-600 w-4 h-4"
+                        className="accent-secondary w-4 h-4"
                       />
                       {t.label}
                     </label>
@@ -387,7 +387,7 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
                 value="true"
                 required
                 defaultChecked={!!existing}
-                className="mt-0.5 accent-amber-600 w-4 h-4 shrink-0"
+                className="mt-0.5 accent-secondary w-4 h-4 shrink-0"
               />
               <span className="text-sm text-gray-700">
                 I understand that this registration records my expression of intent. In New Zealand,
@@ -401,7 +401,7 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
                 value="true"
                 required
                 defaultChecked={!!existing}
-                className="mt-0.5 accent-amber-600 w-4 h-4 shrink-0"
+                className="mt-0.5 accent-secondary w-4 h-4 shrink-0"
               />
               <span className="text-sm text-gray-700">
                 I commit to telling my family about this decision so they can honour my wishes.
@@ -414,11 +414,11 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
                 value="true"
                 required
                 defaultChecked={!!existing}
-                className="mt-0.5 accent-amber-600 w-4 h-4 shrink-0"
+                className="mt-0.5 accent-secondary w-4 h-4 shrink-0"
               />
               <span className="text-sm text-gray-700">
                 I agree to ODNZ&apos;s{" "}
-                <Link href="/privacy-policy" className="text-amber-700 hover:underline" target="_blank">
+                <Link href="/privacy-policy" className="text-secondary hover:underline" target="_blank">
                   privacy policy
                 </Link>
                 . My information will be stored securely and never sold or shared with third parties.
@@ -430,7 +430,7 @@ export function RegistrationForm({ userName, userEmail, existing }: Props) {
         <button
           type="submit"
           disabled={pending}
-          className="w-full py-3 bg-amber-600 text-white rounded-md font-semibold hover:bg-amber-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed text-sm"
+          className="w-full py-3 bg-secondary text-white rounded-md font-semibold hover:bg-secondary-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed text-sm"
         >
           {pending ? "Saving…" : existing ? "Update my registration" : "Register as a donor"}
         </button>

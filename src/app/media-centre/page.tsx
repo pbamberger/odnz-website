@@ -22,10 +22,10 @@ export default async function MediaCentrePage() {
             <li key={a._id}>
               <Link
                 href={`/${a.slug.current}`}
-                className="flex items-center justify-between py-4 group hover:text-amber-600 transition-colors"
+                className="flex items-center justify-between py-4 group hover:text-secondary transition-colors"
               >
-                <span className="text-gray-800 group-hover:text-amber-600 font-medium">{a.title}</span>
-                <span className="text-gray-400 group-hover:text-amber-500 ml-4 shrink-0">→</span>
+                <span className="text-gray-800 group-hover:text-secondary font-medium">{a.title}</span>
+                <span className="text-gray-400 group-hover:text-secondary ml-4 shrink-0">→</span>
               </Link>
             </li>
           ))}

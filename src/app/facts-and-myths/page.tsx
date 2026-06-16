@@ -27,7 +27,7 @@ export default async function FactsAndMythsPage() {
           <Link
             key={s.href}
             href={s.href}
-            className="block p-5 border border-gray-200 rounded-lg hover:border-amber-400 hover:shadow-sm transition-all"
+            className="block p-5 border border-gray-200 rounded-lg hover:border-primary hover:shadow-sm transition-all"
           >
             <h2 className="font-semibold text-gray-900 mb-1">{s.label}</h2>
             <p className="text-sm text-gray-500">{s.description}</p>

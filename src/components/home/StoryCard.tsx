@@ -27,10 +27,10 @@ export function StoryCard({ title, role, quote, slug, portraitUrl }: StoryCardPr
         </div>
       )}
       <div className="p-5 flex flex-col flex-1">
-        <span className="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-2 capitalize">{role}</span>
-        <h3 className="font-bold text-gray-900 text-lg mb-2">{title}</h3>
-        <p className="text-gray-600 text-sm italic leading-relaxed line-clamp-3">"{quote}"</p>
-        <span className="mt-4 text-sm font-semibold text-amber-600 group-hover:underline">Read story →</span>
+        <span className="text-xs font-semibold text-secondary uppercase tracking-wide mb-2 capitalize font-sans">{role}</span>
+        <h3 className="font-bold text-charcoal text-lg mb-2">{title}</h3>
+        <p className="text-charcoal/60 text-sm italic leading-relaxed line-clamp-3">&ldquo;{quote}&rdquo;</p>
+        <span className="mt-4 text-sm font-semibold text-primary group-hover:underline font-sans">Read story →</span>
       </div>
     </Link>
   );
