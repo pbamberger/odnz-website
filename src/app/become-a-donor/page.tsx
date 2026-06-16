@@ -92,18 +92,7 @@ export default function BecomeADonorPage() {
           <p className="text-amber-100 text-lg mb-10">
             Over 400 people are still waiting. Your decision matters.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              href="https://www.nzta.govt.nz/driver-licences/getting-a-licence/organ-and-tissue-donation"
-              variant="outline"
-            >
-              Tick DONOR on your licence
-            </Button>
-            <Button href="#talk-to-your-family" variant="outline">
-              Talk to your family
-            </Button>
-          </div>
-          <p className="mt-6 text-amber-200 text-sm">
+          <p className="text-amber-200 text-sm">
             Questions? Call <strong>0800 4 DONOR</strong> (0800 436 667)
           </p>
         </div>
