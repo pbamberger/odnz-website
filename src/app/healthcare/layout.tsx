@@ -18,7 +18,7 @@ export default function HealthcareLayout({ children }: { children: React.ReactNo
       <div className="flex flex-col md:flex-row gap-10">
         <aside className="md:w-56 shrink-0">
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">Healthcare</p>
-          <nav className="flex flex-col gap-1">
+          <nav aria-label="Healthcare section navigation" className="flex flex-col gap-1">
             {sidebarLinks.map((l) => (
               <Link
                 key={l.href}
