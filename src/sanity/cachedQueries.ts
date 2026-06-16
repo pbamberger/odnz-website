@@ -3,7 +3,8 @@ import { client } from "./client";
 import {
   storiesQuery, storyBySlugQuery,
   healthcarePagesQuery, healthcarePageBySlugQuery,
-  pageBySlugQuery, healthcarePagesBySectionQuery, healthcareChapterQuery,
+  allPagesListQuery, pageBySlugQuery,
+  healthcarePagesBySectionQuery, healthcareChapterQuery,
 } from "./queries";
 
 const isConfigured = /^[a-z0-9-]+$/.test(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? "");
@@ -35,6 +36,12 @@ export const getHealthcarePage = unstable_cache(
   (slug: string) => safeFetch(() => client.fetch(healthcarePageBySlugQuery, { slug }), null),
   ["healthcare-page"],
   { tags: ["healthcare-page"], revalidate: 3600 }
+);
+
+export const getPagesList = unstable_cache(
+  () => safeFetch(() => client.fetch(allPagesListQuery), []),
+  ["pages-list"],
+  { tags: ["page"], revalidate: 3600 }
 );
 
 export const getPage = unstable_cache(

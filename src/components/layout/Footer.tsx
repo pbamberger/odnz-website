@@ -9,7 +9,7 @@ const columns = [
       { label: "Become a Donor", href: "/have-the-conversation-today" },
       { label: "Donation Stories", href: "/stories" },
       { label: "For Families", href: "/knowledge-centre" },
-      { label: "FAQs", href: "/facts-and-myths-faqs" },
+      { label: "FAQs", href: "/facts-and-myths/faqs" },
     ],
   },
   {

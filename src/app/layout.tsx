@@ -9,6 +9,12 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: { default: "Organ Donation New Zealand", template: "%s | ODNZ" },
   description: "One donor has the potential to help up to ten people. Register your decision and talk to your family.",
+  openGraph: {
+    siteName: "Organ Donation New Zealand",
+    type: "website",
+    locale: "en_NZ",
+  },
+  metadataBase: new URL("https://odnz-website.vercel.app"),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

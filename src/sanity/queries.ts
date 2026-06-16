@@ -28,6 +28,12 @@ export const healthcarePageBySlugQuery = groq`
   }
 `;
 
+export const allPagesListQuery = groq`
+  *[_type == "page"] | order(_createdAt desc) {
+    _id, title, slug, _updatedAt
+  }
+`;
+
 export const pageBySlugQuery = groq`
   *[_type == "page" && slug.current == $slug][0] {
     _id, title, slug, body
