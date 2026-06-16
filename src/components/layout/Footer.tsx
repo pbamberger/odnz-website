@@ -7,7 +7,6 @@ const columns = [
     heading: "Donation",
     links: [
       { label: "Become a Donor", href: "/become-a-donor" },
-      { label: "Register as a Donor", href: "/register-as-donor" },
       { label: "Donation Stories", href: "/stories" },
       { label: "For Families", href: "/knowledge-centre" },
       { label: "FAQs", href: "/facts-and-myths/faqs" },

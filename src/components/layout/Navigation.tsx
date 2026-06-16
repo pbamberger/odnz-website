@@ -8,7 +8,6 @@ const publicLinks = [
   { label: "About", href: "/about-odnz" },
   { label: "Donation Stories", href: "/stories" },
   { label: "Become a Donor", href: "/become-a-donor" },
-  { label: "Register as a Donor", href: "/register-as-donor" },
   { label: "For Families", href: "/knowledge-centre" },
 ];
 
