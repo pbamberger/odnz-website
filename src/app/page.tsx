@@ -49,7 +49,7 @@ export default async function HomePage() {
             The most important thing you can do is talk to your family about your wishes.
             Registration is important, but your family&apos;s support makes donation possible.
           </p>
-          <Button href="/have-the-conversation-today">Become a Donor</Button>
+          <Button href="/become-a-donor">Become a Donor</Button>
         </div>
       </section>
     </>
